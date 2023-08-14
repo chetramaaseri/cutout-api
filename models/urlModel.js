@@ -9,6 +9,10 @@ const urlSchema = mongoose.Schema({
         type:String,
         required :["true","Please Enter Route of Short Url"]
     },
+    type:{
+        type:String,
+        required :["true","Please Enter Type of Shorturl"]
+    },
     userId:{
         type: mongoose.Schema.Types.ObjectId
     }

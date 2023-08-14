@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const dovenv = require("dotenv").config();
 const errorHandler = require("./middleware/errorHandler");
 const connectDb = require("./config/dbConnection");
@@ -10,6 +11,7 @@ app.listen(port,()=>{
 });
 connectDb();
 app.use(express.json());
+app.use(cors());
 app.get('/api',(req,res)=>{
     // api information here
     res.send("api route");
